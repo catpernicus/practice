@@ -1,0 +1,308 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0071)http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>CSE 332 Project 1: Sound Blaster!</title>
+  
+<style>
+  h2 {
+    margin-top: 50px; 
+    margin-bottom: 0px; 
+  }
+  hr { 
+    margin-top: 0px; 
+    border-style: solid;
+  }
+  h3 { 
+    margin-top: 15px; 
+    margin-bottom: 0px; 
+  }
+  .h3p { margin-top: 0px; }
+</style></head>
+
+
+<!--== Style ========================================================================================================-->
+
+
+
+
+<body>
+
+<!--== Title & Outline ===============================================================================================-->
+<p>
+  <b>Last Updated: March 29, 2014</b> by HyeIn Kim<br> 
+  <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/">CSE 332 Spring 2014</a>
+</p>
+<h1 style="font-size:1.5em">
+  <img src="./CSE 332 Project 1  Sound Blaster!_files/music.png" height="95" width="80" alt="Shakespeare" style="vertical-align:middle">
+  CSE 332 Project 1: Sound Blaster!
+  <img src="./CSE 332 Project 1  Sound Blaster!_files/sonic.png" height="110" width="90" alt="Bacon" style="vertical-align:middle">
+</h1>
+
+
+<h2>Outline</h2>
+<hr>
+<ul>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#Due">Due Dates &amp; Important notes</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#Submission">Turn in Information</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#Introduction">Introduction</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#Assignment">The Assignment</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#PhaseA">Phase A Programming</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#PhaseB">Phase B Programming</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#AboveAndBeyond">Above and Beyond (Part of Phase B)</a></li>
+  <li><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/#Acknowledgments">Acknowledgments</a></li>
+</ul>
+
+
+
+
+<!--== Due date & Important notes ==================================================================================-->
+<h2 id="Due">Due Dates &amp; Important notes</h2>
+<hr>
+<h3><u>Due Dates</u></h3>
+<ul class="h3p">
+  <li><b>Phase A:</b> Monday April 7, 11:59pm</li>
+  <li><b>Phase B:</b> Thursday April 10, 11:59pm</li>
+</ul>
+
+<h3><u>Important notes</u></h3>
+<ul class="h3p">
+  <li> Complete this project by yourself (i.e., without a partner). You may discuss the assignment with others 
+       in the class, but your solution must be entirely your own work.
+  </li>
+  <li>Read <a href="http://courses.cs.washington.edu/courses/cse332/14sp/policies.shtml">Collaboration Policy</a>, <a href="http://courses.cs.washington.edu/courses/cse332/14sp/grading-policies.shtml">Grading Policy</a>,
+      and <a href="http://courses.cs.washington.edu/courses/cse332/14sp/programming-guidelines.shtml">Programming Guidelines</a> before you begin.  
+      In particular, note that the write-up is worth a substantial portion of the grade. 
+  </li>
+  <li><b>Each file you turn in should have your name at the top of the file.</b></li>
+  <li>You <strong>must</strong> implement the list and array stacks by hand. You should not use any classes from
+      Java libraries (You should not use any import statements, except <tt>java.util.EmptyStackException</tt>).
+  </li>
+  <li>You must not change the provided <tt>DStack.java</tt> and <tt>GStack.java</tt> files, 
+      and your stacks must implement these interfaces as provided to you.
+  </li> 
+  <li>Any extra credit must be attempted after finishing &amp; turning in all codes for phase B. 
+      *DO NOT MIX* your extra credit stuff with your phase B files!
+  </li>
+  <li>Your code should not contain any compile warnings. In GArrayStack, you will encounter a non-avoidable warning which
+      you are allowed to suppress using <tt>@SuppressWarnings("unchecked")</tt> annotation. However, you are NOT allowed to
+      suppress any other warnings, you should instead fix your code to remove the warnings. 
+  </li>  
+  <li>How digital sound works, and a link for a wav to dat conversion program: <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/sound.html">here</a>.</li>
+  <li>A few tips on using sox <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/Sox_Usage.txt">here</a><a>.</a></li><a>
+</a></ul><a>
+
+
+
+
+<!--== Turn In Information ==================================================================================-->
+<h2 id="Submission">Turn in Information</h2>
+<hr>
+Turn in your project using </a><a href="https://catalyst.uw.edu/collectit/dropbox/rea2000/31357">Course Dropbox</a><br><br>
+
+For Phase A, turn in the following files, <b>named *EXACTLY* as follows</b>:
+<ul>
+  <li><tt>ArrayStack.java</tt></li>
+  <li><tt>ListStack.java</tt> While it is acceptable to submit a separate file for your node class, try using an 
+    <a href="http://java.sun.com/docs/books/tutorial/java/javaOO/nested.html">inner class</a>.
+  </li>
+</ul>
+
+For Phase B, turn in the following files, <b>named *EXACTLY* as follows</b>:
+<ul>
+  <li><tt>GArrayStack.java</tt></li>
+  <li><tt>GListStack.java</tt></li>
+  <li><tt>ArrayStack.java</tt> (If you made any improvements from Phase A)</li>
+  <li><tt>ListStack.java</tt>  (If you made any improvements from Phase A)</li>
+  <li><tt>Reverse.java</tt></li>
+  <li><tt>README.pdf</tt> (Answers to the Write Up Questions)</li>
+  <li>Testing code (either java file or script file)</li>
+  <li><tt>extracredit.zip</tt> (Optional, only if you did Above &amp; Beyond)</li>
+</ul>  
+<p>
+  Do <b>not</b> turn in <tt>DStack.java</tt> and <tt>GStack.java</tt>, and llease make sure that 
+  <tt>extracredit.zip</tt> decompresses its contents into a folder called <tt>extracredit</tt> and <em>not</em> 
+  into a bunch of individual files.
+</p>
+  
+
+
+
+<!--== Introduction ==========================================================================================-->
+<h2 id="Introduction">Introduction</h2>
+<hr>
+<p>
+  The purpose of this project is to implement a Stack ADT in the two most common ways, an array and a linked list.  
+  In phase A, you'll implement stacks for Java <tt>double</tt> numbers. Then in phase B, you'll implement generic stacks 
+  and instantiate them with type <tt>Double</tt>.
+</p>
+<p>
+  Your Stack implementations will be used to do sound manipulation, namely reversing a sound clip. This process, 
+  called "backmasking," was used by musicians including the Beatles, Jimi Hendrix, and Ozzy Ozbourne, 
+  although it seems to have fallen out of favor in recent years. Click <a href="http://en.wikipedia.org/wiki/Backmasking">here</a> 
+  for a history of this (sometimes controversial!) practice. "But wait," you say, "CSE 143 never taught me 
+  how to work with music..." Don't worry! All the music-handling parts have been done for you.
+</p>
+
+
+
+
+<!--== Assignment ==========================================================================================================-->
+<h2 id="Assignment">The Assignment</h2>
+<hr>
+You'll need these files to start out: <tt><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/Reverse.java">Reverse.java</a></tt>, 
+<tt><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/DStack.java">DStack.java</a></tt>, <tt><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/GStack.java">GStack.java</a></tt>
+<ul>
+  <li>The code provided for you will read in a sound file, but it does so in <tt>.dat</tt> format.  
+      You'll use a program called <tt>sox</tt> to convert wav files to <tt>.dat</tt>: You can find information on it 
+      <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/sound.html#sox">here</a> and also on how to use it <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/Sox_Usage.txt">here</a><a>.
+  </a></li><a>
+  </a><li><a>Later, when you are ready to run your program and the <tt>sox</tt> program, you will want these sound files:
+      <tt></tt></a><tt><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/bot.wav">bot.wav</a></tt>, <tt><a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/secret.wav">secret.wav</a></tt>
+  </li>
+</ul>
+
+<p>
+  You will write a program that reads a sound file in the <tt>.dat</tt> format (explained below), and writes another 
+  <tt>.dat</tt> sound file which is the reverse of the first. We provide you with a class <tt>Reverse</tt> whose main
+  method reads in a <tt>.dat</tt> sound file, pushes all the sound values on a stack, then pops them all off and writes 
+  them into a new <tt>.dat</tt> sound file. We've also provided you interfaces <tt>DStack</tt> (for Phase A) 
+  and <tt>GStack</tt> (for Phase B), which define the stacks you will implement. 
+  Your first job is to familiarize yourself with these files.
+  The music-reversing code will use your stack implementations in only certain ways, <b>for this project, you should 
+  test that your stacks are correct in cases other than those used by the <tt>Reverse</tt> program</b>.
+</p>
+
+
+
+
+<!--== Phase A ============================================================================================================-->
+<h2 id="PhaseA">Phase A Programming</h2>
+<hr>
+<p>
+  For phase A, you need to provide <i>two</i> stack implementations, one using an array and one using a linked list.  
+  They should be called <tt>ArrayStack</tt> and <tt>ListStack</tt>, respectively. They should implement the 
+  <tt>DStack</tt> interface given to you. Once you provide these implementations, <tt>Reverse</tt> should work and 
+  create backwards sound files. It should take no more than a page or two of code to provide the implementations.  
+</p>
+<ul>
+  <li>Your array implementation should start with an array of size 10 elements and <i>resize</i> to use an array 
+      <i>twice as large</i> whenever the array becomes full, copying over the elements in the smaller array. 
+  </li>
+  <li>When growing your array, do your copying "by hand" with a loop, do not use Arrays.copyOf or other similar methods. 
+      It is good to know that these methods exist, but for now we want to focus on understanding everything that is 
+      going on "under the covers" as we talk about efficiency. Using the length property of an array is perfectly fine.
+  </li>
+  <li>For your linked list implementation, you should implement your own linked list nodes and build a stack out of those, 
+      similar to the slides from lecture 1 that do the same thing for a queue. You should *NOT* be using any classes 
+      from Java collections. You may include your node class as a separate file (Don't forget to submit this file!)  
+      or as a nested/inner class. Either will be fine.
+  </li>
+  <li>Both <tt>ArrayStack</tt> and <tt>ListStack</tt> should throw an <tt>EmptyStackException</tt> if <tt>pop()</tt> 
+      or <tt>peek()</tt> is called when the stack is empty. To use <tt>EmptyStackException</tt>, add the following line to your file:<br>
+      <code>import java.util.EmptyStackException;</code>
+  </li>    
+  <li>Note that your solution to Phase A does not require making changes to <tt>Reverse.java</tt>.</li>
+</ul>
+
+
+
+
+
+<!--== Phase B ============================================================================================================-->
+<h2 id="PhaseB">Phase B Programming</h2>
+<hr> 
+<p>
+  For phase B, you need to provide <i>two more</i> stack implementations, these implementing the interface 
+  <tt>GStack&lt;T&gt;</tt>.  Create classes called <tt>GArrayStack</tt> and <tt>GListStack</tt> that are just like
+  <tt>ArrayStack</tt> and <tt>ListStack</tt> except that they are generic in the type of elements kept in the stack.
+  The simplest approach is to <i>copy</i> <tt>ArrayStack</tt> and <tt>ListStack</tt> and then make appropriate
+  changes.  Normally such copy-and-paste is poor form, but here the pedagogical purpose is to show you how
+  little you need to change to make the code generic — and we want to grade all four stack implementations.
+  To use your generic stacks you will need to modify <tt>Reverse.java</tt> by replacing the 3 occurrences of:
+</p>
+<p><code>System.err.println("no support for generics yet");<br>System.exit(1);</code></p>
+<p>
+  with appropriate code.  Again, the code you write will be only slightly different from non-generic code 
+  that is already there.  Do not make other changes to <tt>Reverse.java</tt>.<br>
+  Note: Creating generic arrays can be a bit tricky at first; check out these 
+  <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/genericArrays.html">notes</a> (mainly workaround #1) for help.
+</p>  
+
+
+<h3><u>Running Your Program</u></h3>
+<p class="h3p">
+  The <tt>Reverse</tt> program takes 4 arguments (a.k.a. "command-line arguments"). 
+  The first is the word <tt>array</tt> or
+  <tt>list</tt>, and specifies which implementation to use.  The second is the word
+  <tt>double</tt> or <tt>generic</tt>; the latter is for Phase B.
+  The next two are the input and output <tt>.dat</tt> file names (you need to
+  include the <tt>.dat</tt> extension). From the command-line, you can run the program
+  with something like:
+</p>
+ <pre>java Reverse list double in.dat out.dat</pre>
+<p>
+  To run your program in Eclipse, create a "Run Configuration" and under the "Arguments" tab 
+  put the arguments (e.g., <tt>list double in.dat out.dat</tt>) in the "Program arguments" box.  
+  Here are some more tips about <a href="http://courses.cs.washington.edu/courses/cse332/14sp/sections/week1/proj1_eclipse.html">using Eclipse with Project 1</a>.
+  To run <tt>Reverse</tt>, you will need a <tt>.dat</tt> file, which you can create from a <tt>.wav</tt> file 
+  as explained in the <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/sound.html#DigitalSound">Digital Sound</a> section.  
+  It may also be useful for you to create some short <tt>.dat</tt> files by hand to confirm that you are getting the right results. 
+</p>
+
+
+<h3><u>Write up (Due with Phase B)</u></h3>
+<p class="h3p">
+  Submit a <tt>README.pdf</tt> file, answering the questions in this template README file: 
+  (<a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/README.docx"><tt>README.docx</tt></a>, <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/README.pdf"><tt>README.pdf</tt></a>)<br>
+  Note that the write-up questions can all be turned in for Phase B, but some of them (1-7) refer to work 
+  you did in Phase A, so you may wish to start on them early.
+</p>
+
+
+
+
+<!--================================================================================================================================-->
+<h2 id="AboveAndBeyond">Above and Beyond (Due with Phase B)</h2>
+<hr>  
+<p>
+  The following list of suggestions are meant for you to try only if you finish the requirements early. 
+  Please be sure that your stack implementations have been thoroughly tested and you have checked your writeup carefully 
+  before attempting any of these (Completed phaseB and turned in all phaseB code). 
+  Recall that any extra-credit you complete is noted and kept separate in the gradebook and *may* 
+  be used to adjust your grade at the end of the quarter, as detailed in the
+  <a href="http://courses.cs.washington.edu/courses/cse332/14sp/grading-policies.shtml">course grading policy</a>.<br> 
+  <i>Note: please turn in all extra credit files separately, as described under 'Turn-in'. DO NOT MIX it with Phase B code!</i><br>
+  <i>Note: You need to describe each of your implementations in detail in your write-up to get credit</i>
+</p>
+  
+<ol>
+  <li>(least difficult) Modify your array implementations so that when the array is 3/4 empty, the stack resizes to use 
+      an array of half the size.
+  </li>
+  <li>(somewhat more difficult) Implement the Karplus-Strong algorithm (to generate "reverb" sounds). 
+      A description of this algorithm is available <a href="http://courses.cs.washington.edu/courses/cse332/14sp/projects/project1/karplus_strong.html">here</a>.
+  </li>
+  <li>(most difficult) Assuming that your <tt>.dat</tt> input file contained a single note, try writing a program 
+      which will output a single-octave scale beginning at that note. Would the notes of an "evenly spaced" 
+      scale grow logarithmically, linearly, polynomially, or according to some other function? For more information about 
+      the evenly-spaced scale, refer to <a href="http://en.wikipedia.org/wiki/Twelve-tone_scale">this article</a>.
+      To earn full credit, you must start from an actual recorded note (not a synthetic one) and generate 
+      the single-octave scale.  It's fine if the note durations are decreasing. 
+  </li>
+</ol>
+
+
+
+
+<!--== Acknowledgments =========================================================================================-->
+<h2 id="Acknowledgments">Acknowledgments</h2>
+<hr>  
+<p>
+  Like many assignments, this has been passed down to us through the vaporous mists of time. Among all our fore-bearers, 
+  we would especially like to thank Ashish Sabharwal, Adrien Treuille, and Adrien's Data Structures professor, Timothy Snyder.
+</p>
+
+
+
+
+</body></html>
